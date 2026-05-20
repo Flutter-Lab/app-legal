@@ -1,0 +1,27 @@
+{
+  "slug": "vocapal",
+  "appName": "VocaPal",
+  "legalName": "VocaPal",
+  "copyrightName": "VocaPal",
+  "lastUpdated": "Month Day, Year",
+  "tagline": "Replace this with the short plain-language summary from the current VocaPal privacy policy.",
+  "contactEmail": "you@example.com",
+  "githubOrgUrl": "https://github.com/flutter-lab",
+  "publicUrl": "https://flutter-lab.github.io/app-legal/vocapal/privacy/",
+  "commitHistoryUrl": "https://github.com/Flutter-Lab/app-legal/commits/main/public/vocapal/privacy/index.html",
+  "ageBadge": "All Ages",
+  "personalDataSummary": "Describe whether VocaPal collects personal information such as name, email address, account credentials, or voice/audio data.",
+  "localDataIntro": "Describe what VocaPal stores locally on the device.",
+  "localDataItems": [
+    "Replace with app-specific local data item"
+  ],
+  "useItems": [
+    "Replace with app-specific use of stored data"
+  ],
+  "trackingStatement": "Describe whether VocaPal collects analytics events, diagnostics, or behavioral tracking.",
+  "thirdPartyServices": [],
+  "disabledServicesStatement": "List services not enabled, such as ads, analytics, Crashlytics, accounts, purchases, or cloud sync.",
+  "retentionStatement": "Describe how long VocaPal keeps local or cloud data and how users can delete it.",
+  "childrenStatement": "Describe whether VocaPal collects information from children or is intended for children."
+}
+

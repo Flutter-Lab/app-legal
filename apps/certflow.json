@@ -1,0 +1,40 @@
+{
+  "slug": "certflow",
+  "appName": "CertFlow",
+  "legalName": "CertFlow",
+  "copyrightName": "CertFlow",
+  "lastUpdated": "May 18, 2026",
+  "tagline": "CertFlow does not collect, store, or share your personal information. Your study progress stays on your device.",
+  "contactEmail": "abir2526@gmail.com",
+  "githubOrgUrl": "https://github.com/flutter-lab",
+  "publicUrl": "https://flutter-lab.github.io/app-legal/certflow/privacy/",
+  "commitHistoryUrl": "https://github.com/Flutter-Lab/app-legal/commits/main/public/certflow/privacy/index.html",
+  "ageBadge": "All Ages",
+  "personalDataSummary": "CertFlow is designed to work without requiring any personal information. We do not ask for your name, email address, phone number, or any account credentials.",
+  "localDataIntro": "The only data stored by the app is your study progress. This data is stored locally on your device only and is never transmitted to us.",
+  "localDataItems": [
+    "Quiz results",
+    "Spaced repetition card state",
+    "XP, streaks, and badges",
+    "Topic-by-topic progress and accuracy"
+  ],
+  "useItems": [
+    "Track your progress across quiz sessions",
+    "Schedule spaced repetition reviews based on your performance",
+    "Display your XP level, daily streak, and unlocked badges",
+    "Show topic-by-topic accuracy in your progress dashboard"
+  ],
+  "trackingStatement": "No usage data, analytics events, or behavioral tracking is collected or sent to any server.",
+  "thirdPartyServices": [
+    {
+      "name": "Google Firebase Firestore",
+      "description": "CertFlow uses Google Firebase Firestore to deliver question content, including the Security+ SY0-701 question bank. When the app connects to Firestore, it reads question data only. It does not write user-identifiable information to the cloud.",
+      "privacyUrl": "https://firebase.google.com/support/privacy",
+      "privacyLabel": "Firebase privacy information"
+    }
+  ],
+  "disabledServicesStatement": "The app uses only the Firestore database service. Firebase Analytics, Firebase Crashlytics, advertisements, user accounts, and in-app purchases are not enabled in v1.0.",
+  "retentionStatement": "All study data is stored locally on your device using standard iOS storage. This data remains on your device until you uninstall the app, at which point it is permanently deleted. We have no access to this data and cannot restore it after uninstallation.",
+  "childrenStatement": "CertFlow does not collect personal information from anyone, including children under the age of 13. The app is suitable for all ages. There are no in-app purchases, advertisements, or social features that would require any personal information."
+}
+
