@@ -8,7 +8,14 @@
   "contactEmail": "you@example.com",
   "githubOrgUrl": "https://github.com/flutter-lab",
   "publicUrl": "https://flutter-lab.github.io/app-legal/vocapal/privacy/",
+  "supportUrl": "https://flutter-lab.github.io/app-legal/vocapal/support/",
   "commitHistoryUrl": "https://github.com/Flutter-Lab/app-legal/commits/main/public/vocapal/privacy/index.html",
+  "supportCommitHistoryUrl": "https://github.com/Flutter-Lab/app-legal/commits/main/public/vocapal/support/index.html",
+  "supportIntro": "Replace this with VocaPal support instructions.",
+  "supportItems": [
+    "Replace with support topic"
+  ],
+  "supportResponseTime": "Replace with expected support response time.",
   "ageBadge": "All Ages",
   "personalDataSummary": "Describe whether VocaPal collects personal information such as name, email address, account credentials, or voice/audio data.",
   "localDataIntro": "Describe what VocaPal stores locally on the device.",
@@ -24,4 +31,3 @@
   "retentionStatement": "Describe how long VocaPal keeps local or cloud data and how users can delete it.",
   "childrenStatement": "Describe whether VocaPal collects information from children or is intended for children."
 }
-

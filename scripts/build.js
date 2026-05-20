@@ -5,8 +5,10 @@ const root = path.resolve(__dirname, "..");
 const appsDir = path.join(root, "apps");
 const publicDir = path.join(root, "public");
 const templatePath = path.join(root, "templates", "privacy.html");
+const supportTemplatePath = path.join(root, "templates", "support.html");
 
 const template = fs.readFileSync(templatePath, "utf8");
+const supportTemplate = fs.readFileSync(supportTemplatePath, "utf8");
 
 function escapeHtml(value) {
   return String(value)
@@ -43,23 +45,24 @@ function renderThirdPartyServices(services) {
   }).join("\n    ");
 }
 
-function renderTemplate(app) {
+function renderTemplate(app, sourceTemplate) {
   const githubOrgLabel = app.githubOrgUrl.replace(/^https?:\/\//, "");
   const values = {
     ...app,
     year: new Date().getFullYear(),
     githubOrgLabel,
     localDataList: renderList(app.localDataItems),
+    supportList: renderList(app.supportItems),
     useList: renderList(app.useItems),
     thirdPartyServices: renderThirdPartyServices(app.thirdPartyServices)
   };
 
-  return template.replace(/\{\{([a-zA-Z0-9]+)\}\}/g, (_, key) => {
+  return sourceTemplate.replace(/\{\{([a-zA-Z0-9]+)\}\}/g, (_, key) => {
     if (!(key in values)) {
       throw new Error(`Missing template value: ${key}`);
     }
 
-    const rawHtmlKeys = new Set(["localDataList", "useList", "thirdPartyServices"]);
+    const rawHtmlKeys = new Set(["localDataList", "supportList", "useList", "thirdPartyServices"]);
     return rawHtmlKeys.has(key) ? values[key] : escapeHtml(values[key]);
   });
 }
@@ -72,9 +75,13 @@ function validateApp(app, fileName) {
     "tagline",
     "contactEmail",
     "publicUrl",
+    "supportUrl",
     "commitHistoryUrl",
+    "supportCommitHistoryUrl",
     "personalDataSummary",
     "localDataIntro",
+    "supportIntro",
+    "supportResponseTime",
     "trackingStatement",
     "disabledServicesStatement",
     "retentionStatement",
@@ -105,11 +112,16 @@ for (const fileName of appFiles) {
   const app = JSON.parse(fs.readFileSync(filePath, "utf8"));
   validateApp(app, fileName);
 
-  const html = renderTemplate(app);
-  const outputDir = path.join(publicDir, app.slug, "privacy");
-  fs.mkdirSync(outputDir, { recursive: true });
-  fs.writeFileSync(path.join(outputDir, "index.html"), html);
+  const privacyHtml = renderTemplate(app, template);
+  const privacyOutputDir = path.join(publicDir, app.slug, "privacy");
+  fs.mkdirSync(privacyOutputDir, { recursive: true });
+  fs.writeFileSync(path.join(privacyOutputDir, "index.html"), privacyHtml);
+
+  const supportHtml = renderTemplate(app, supportTemplate);
+  const supportOutputDir = path.join(publicDir, app.slug, "support");
+  fs.mkdirSync(supportOutputDir, { recursive: true });
+  fs.writeFileSync(path.join(supportOutputDir, "index.html"), supportHtml);
 
   console.log(`Generated public/${app.slug}/privacy/index.html`);
+  console.log(`Generated public/${app.slug}/support/index.html`);
 }
-

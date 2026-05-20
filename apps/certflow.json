@@ -8,7 +8,17 @@
   "contactEmail": "abir2526@gmail.com",
   "githubOrgUrl": "https://github.com/flutter-lab",
   "publicUrl": "https://flutter-lab.github.io/app-legal/certflow/privacy/",
+  "supportUrl": "https://flutter-lab.github.io/app-legal/certflow/support/",
   "commitHistoryUrl": "https://github.com/Flutter-Lab/app-legal/commits/main/public/certflow/privacy/index.html",
+  "supportCommitHistoryUrl": "https://github.com/Flutter-Lab/app-legal/commits/main/public/certflow/support/index.html",
+  "supportIntro": "Need help with CertFlow? Send a short message with your device model, iOS version, and what you were trying to do.",
+  "supportItems": [
+    "Questions about app access or setup",
+    "Bug reports for quizzes, progress, or spaced repetition",
+    "Question bank corrections or explanation feedback",
+    "Privacy and data handling questions"
+  ],
+  "supportResponseTime": "I usually review support messages within 2-3 business days.",
   "ageBadge": "All Ages",
   "personalDataSummary": "CertFlow is designed to work without requiring any personal information. We do not ask for your name, email address, phone number, or any account credentials.",
   "localDataIntro": "The only data stored by the app is your study progress. This data is stored locally on your device only and is never transmitted to us.",
@@ -37,4 +47,3 @@
   "retentionStatement": "All study data is stored locally on your device using standard iOS storage. This data remains on your device until you uninstall the app, at which point it is permanently deleted. We have no access to this data and cannot restore it after uninstallation.",
   "childrenStatement": "CertFlow does not collect personal information from anyone, including children under the age of 13. The app is suitable for all ages. There are no in-app purchases, advertisements, or social features that would require any personal information."
 }
-

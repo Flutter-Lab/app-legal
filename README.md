@@ -5,7 +5,9 @@ Shared GitHub Pages site for app privacy policies published by Flutter Lab.
 Live URL pattern after GitHub Pages is enabled:
 
 - `https://flutter-lab.github.io/app-legal/certflow/privacy/`
+- `https://flutter-lab.github.io/app-legal/certflow/support/`
 - `https://flutter-lab.github.io/app-legal/vocapal/privacy/`
+- `https://flutter-lab.github.io/app-legal/vocapal/support/`
 
 ## Update a Policy
 
